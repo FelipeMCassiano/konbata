@@ -15,17 +15,17 @@ Konbata makes it easy to convert images between formats directly from the comman
 ### **Commands and Flags**  
 | **Command**            | **Flags**                                   | **Description**                                             |  
 |-------------------------|---------------------------------------------|-------------------------------------------------------------|  
-| `konbata [IMAGE_PATH]`  | `--png` (convert to PNG) <br> `--jpeg` (convert to JPEG) | Converts the image at the specified path to the desired format. |
+| `konbata [IMAGE_PATH]`  | `--png` (convert to PNG) <br> `--jpeg` (convert to JPEG) <br> `-r [NAME]` (rename the image to the specified name)| Converts the image at the specified path to the desired format. |
 
 ---
 
 ### **Example**  
 Convert an image to PNG:  
 ```bash
-konbata image.jpg --png
+konbata image.jpg --png -r converted_image
 ```
 
 Convert an image to JPEG:  
 ```bash
-konbata image.png --jpeg
+konbata image.png --jpeg -r converted_image
 ```
