@@ -38,7 +38,7 @@ func createRootCmd() *cobra.Command {
 					return err
 				}
 				outputName := renameFlag
-				if len(outputName) < 1 {
+				if (outputName) == "" {
 					outputName = imagePath
 				}
 
@@ -58,7 +58,7 @@ func createRootCmd() *cobra.Command {
 				}
 
 				outputName := renameFlag
-				if len(outputName) > 1 {
+				if len(outputName) < 1 {
 					outputName = imagePath
 				}
 
