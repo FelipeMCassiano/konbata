@@ -6,7 +6,7 @@
 To install konbata, you need to have Go installed on your system. Then, you can install it using the following command:
 
 ```bash
-go install github.com/FelipeMCassiano/konbata@latest
+go install github.com/FelipeMCassiano/konbata@1.0.0
 ```
 
 ## **Usage**  
