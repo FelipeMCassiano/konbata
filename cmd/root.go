@@ -10,6 +10,7 @@ import (
 	"image/png"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/spf13/cobra"
@@ -37,9 +38,9 @@ func createRootCmd() *cobra.Command {
 				if err != nil {
 					return err
 				}
-				outputName := renameFlag
-				if (outputName) == "" {
-					outputName = imagePath
+				outputName := imagePath
+				if renameFlag != "" {
+					outputName = fmt.Sprintf("%s/%s", filepath.Dir(imagePath), renameFlag)
 				}
 
 				jpegPath := fmt.Sprintf("%s.jpeg", strings.TrimSuffix(outputName, ".png"))
@@ -57,9 +58,9 @@ func createRootCmd() *cobra.Command {
 					return err
 				}
 
-				outputName := renameFlag
-				if len(outputName) < 1 {
-					outputName = imagePath
+				outputName := imagePath
+				if renameFlag != "" {
+					outputName = fmt.Sprintf("%s/%s", filepath.Dir(imagePath), renameFlag)
 				}
 
 				pngPath := fmt.Sprintf("%s.png", strings.TrimSuffix(outputName, ".jpeg"))
